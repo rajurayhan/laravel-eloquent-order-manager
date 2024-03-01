@@ -1,0 +1,21 @@
+{
+    "name": "rajurayhan/laravel-eloquent-order-manager",
+    "description": "A Laravel package for effortlessly managing the order of Eloquent models. Simplify sorting, reordering, and maintaining the order of items in your application with ease.",
+    "type": "library",
+    "license": "MIT",
+    
+    "authors":[
+        {
+            "name"  : "Raju Rayhan", 
+            "email" : "raju.rayhan@yandex.com"
+        }
+    ], 
+    "minimum-stability": "dev", 
+    "autoload": {
+        "psr-4": {
+            "Raju\\EloquentOrder\\": "src/"
+        }
+    }, 
+    "extra": { 
+    }
+}
