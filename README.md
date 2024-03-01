@@ -1,26 +1,27 @@
-# Send Mail via Exchange Web Services!
+# Laravel Eloquent Order Manager
 
-## Sending Email via Microsoft Exchange Web Services (EWS) made easy! 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/rajurayhan/laravel-eloquent-order-manager.svg?style=flat-square)](https://packagist.org/packages/rajurayhan/laravel-eloquent-order-manager)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/rajurayhan/laravel-eloquent-order-manager/run-tests?label=tests)](https://github.com/rajurayhan/laravel-eloquent-order-manager/actions/workflows/run-tests.yml)
+[![Total Downloads](https://img.shields.io/packagist/dt/rajurayhan/laravel-eloquent-order-manager.svg?style=flat-square)](https://packagist.org/packages/rajurayhan/laravel-eloquent-order-manager)
 
-![image info](https://upload.wikimedia.org/wikipedia/commons/a/a0/Microsoft_Exchange_logo.svg)
+A Laravel package for effortlessly managing the order of Eloquent models. Simplify sorting, reordering, and maintaining the order of items in your application with ease.
+
 ## Installation
 
-Install via Composer
+You can install the package via composer:
 
-    composer require rajurayhan/laravel-ews-mail-server dev-master
+```bash
+composer require rajurayhan/laravel-eloquent-order-manager
 
-Publish Configuration and Setup your Credentials
-
-    php artisan vendor:publish --tag=ewsmailserver
 
 ## Usage
 Simple! 
   
-    use Raju\EWSMail\ExchangeMailServer;
-    ExchangeMailServer::sendEmail(['name' => 'Raju at LHG', 'email' => 'raju@lhgraphics.com'], ['subject' => 'Mail From Package', 'body' => 'Message Body']);
+    use Raju\EloquentOrder\EloquentOrderManagerService;
 
-## Note     
- Update your credentials config/ews-mail-server.php 
+    $orderManager = new EloquentOrderManagerService(YourModel::class);
+    $newItem = ["name" => "New Item", "order" => 4];
+    $orderManager->addOrUpdateItem($newItem);
  
 ## Find Me
 	Email: devraju.bd@gmail.com 

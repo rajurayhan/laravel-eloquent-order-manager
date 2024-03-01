@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services;
+namespace Raju\EloquentOrder;
 use Illuminate\Support\Facades\DB;
 
 class EloquentOrderManagerService
