@@ -14,13 +14,13 @@ You can install the package via composer:
 composer require rajurayhan/laravel-eloquent-order-manager
 
 
-## Usage
-Simple! 
+## Usage 
   
     use Raju\EloquentOrder\EloquentOrderManagerService;
 
     $orderManager = new EloquentOrderManagerService(YourModel::class);
     $newItem = ["name" => "New Item", "order" => 4];
+    $newItem = ["id" => 5, "name" => "New Item", "order" => 4]; // If Updating existing entry.
     $orderManager->addOrUpdateItem($newItem);
  
 ## Find Me
